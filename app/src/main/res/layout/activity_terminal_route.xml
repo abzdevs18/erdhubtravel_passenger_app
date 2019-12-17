@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TerminalRoute">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapViewTerminal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat ="9.305794"
+        mapbox:mapbox_cameraTargetLng = "123.304336"
+        android:elevation="0dp"
+        mapbox:mapbox_cameraZoom = "12"/>
+
+    <RelativeLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:elevation="8dp"
+        android:background="@drawable/back">
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="9dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:id="@+id/t_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Easy Ride Scheduling Hub"
+                    android:gravity="center"
+                    android:textSize="23sp"
+                    android:textColor="#f3f3f3"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/startNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_navigate"
+        android:layout_above="@id/bottom_nav"
+        android:layout_alignParentRight="true"
+        android:contentDescription="Search Map"
+        android:layout_margin="16dp" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        android:elevation="0dp"
+        app:menu="@menu/bottomnav" />
+</RelativeLayout>

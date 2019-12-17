@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/back">
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="9dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/app_bar_menu"
+                    android:textSize="30sp"
+                    />
+                <TextView
+                    android:id="@+id/t_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Easy Ride Scheduling Hub"
+                    android:gravity="center"
+                    android:textSize="23sp"
+                    android:textColor="#f3f3f3"
+                    />
+                <TextView
+                    android:id="@+id/account_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ic_account_circle_black_24dp"
+                    android:layout_marginRight="0dp" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/sub_t_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Places"
+        android:textColor="@color/defaultColor"
+        android:textSize="35sp"
+        android:elevation="8dp"
+        android:padding="10dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/r_places"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</LinearLayout>

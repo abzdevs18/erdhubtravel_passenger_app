@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearRoute"
+    tools:context=".Routes">
+
+    <RelativeLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/back">
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="9dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:id="@+id/t_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Easy Ride Scheduling Hub"
+                    android:gravity="center"
+                    android:textSize="23sp"
+                    android:textColor="#f3f3f3"
+                    />
+                <android.support.v7.widget.SearchView
+                    android:id="@+id/routeQuery"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/s_back"
+                    android:theme="@style/Theme.MaterialComponents.Light.BottomSheetDialog"
+                    android:layout_marginRight="10dp"
+                    app:queryHint="Search user.."
+                    android:focusable="true"
+                    android:contextClickable="true">
+
+                </android.support.v7.widget.SearchView>
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/routeInDb"
+        android:layout_below="@id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        android:elevation="0dp"
+        app:menu="@menu/bottomnav" />
+</RelativeLayout>

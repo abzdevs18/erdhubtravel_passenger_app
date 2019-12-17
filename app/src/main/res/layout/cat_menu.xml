@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/borderradius"
+    android:elevation="8dp"
+    android:layout_margin="5dp"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="110dp"
+        android:layout_margin="10dp"
+        android:background="#fff"
+        android:layout_gravity="center"
+        android:id="@+id/image"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waldorf Salad"
+        android:textColor="@color/defaultColor"
+        android:padding="15dp"
+        android:id="@+id/name"/>
+
+</LinearLayout>
